@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Férias</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef1f5;
+            color: #333333;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #3c6e91;
+            margin-bottom: 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: bold;
+            color: #555555;
+            margin-bottom: 6px;
+        }
+
+        input {
+            padding: 9px 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            background-color: #fafafa;
+            font-size: 14px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3c6e91;
+            background-color: #ffffff;
+        }
+
+        .status {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status-botao {
+            background-color: #5cb85c;
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        fieldset {
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: #555555;
+        }
+
+        .opcoes {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .aviso {
+            background-color: #d9edf7;
+            border: 1px solid #bce8f1;
+            color: #31708f;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Solicitação de Férias</h1>
+
+        <form>
+
+            <div class="grid">
+
+                <div class="campo">
+                    <label for="colaborador">Colaborador</label>
+                    <input type="text" id="colaborador" value="ITAMAR MENDES DA SILVEIRA">
+                </div>
+
+                <div class="campo">
+                    <label for="data">Data</label>
+                    <input type="date" id="data">
+                </div>
+
+                <div class="status">
+                    <label>Status</label>
+                    <button type="button" class="status-botao">
+                        Solicitando
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="grid-3">
+
+                <div class="campo">
+                    <label for="departamento">Departamento</label>
+                    <input type="text" id="departamento" value="DAP - Depto Administrativo">
+                </div>
+
+                <div class="campo">
+                    <label for="centro">Centro de Custo</label>
+                    <input type="text" id="centro">
+                </div>
+
+                <div class="campo">
+                    <label for="unidade">Unidade de Negócio</label>
+                    <input type="text" id="unidade">
+                </div>
+
+            </div>
+
+            <fieldset>
+
+                <legend>Período Aquisitivo</legend>
+
+                <div class="grid-4">
+
+                    <div class="campo">
+                        <label for="inicio_periodo">Início</label>
+                        <input type="date" id="inicio_periodo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="fim_periodo">Fim</label>
+                        <input type="date" id="fim_periodo">
+                    </div>
+
+                    <div class="campo">
+                        <label for="saldo">Dias de Saldo</label>
+                        <input type="text" id="saldo" value="30">
+                    </div>
+
+                    <div class="campo">
+                        <label for="limite">Limite</label>
+                        <input type="date" id="limite">
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend>Início das Férias</legend>
+
+                <div class="grid-4">
+
+                    <div class="campo">
+                        <label for="inicio_ferias">Início das Férias</label>
+                        <input type="date" id="inicio_ferias">
+                    </div>
+
+                    <div class="campo">
+                        <label for="dias">Dias</label>
+                        <input type="text" id="dias" value="30">
+                    </div>
+
+                    <div class="campo">
+                        <label for="fim_ferias">Final das Férias</label>
+                        <input type="date" id="fim_ferias">
+                    </div>
+
+                    <div class="campo">
+                        <label for="abono">Abono</label>
+                        <input type="text" id="abono" value="0">
+                    </div>
+
+                </div>
+
+                <div class="opcoes">
+
+                    <label>1ª Parc. do 13º Salário</label>
+
+                    <input type="radio" name="decimo" id="sim" checked>
+                    <label for="sim">Sim</label>
+
+                    <input type="radio" name="decimo" id="nao">
+                    <label for="nao">Não</label>
+
+                </div>
+
+            </fieldset>
+
+            <div class="aviso">
+                <strong>AVISO:</strong>
+                Entregue a Carteira de Trabalho e Previdência Social do Funcionário na Adm. de Pessoal para anotações de férias.
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
