@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Skeleton</title>
     <style>
         *{
             margin: 0;
@@ -66,6 +66,13 @@
         .campo-grupo{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 20px 40px;
+            margin-bottom: 20px;
+        }
+
+        .campo-grupo2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 20px 40px;
             margin-bottom: 20px;
         }
@@ -264,7 +271,57 @@
             <input type="text" id="telefone" name="telefone" maxlength="15" placeholder="(61) 9 9999-9999">
           </div>
         </div>
+        
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" maxlength="15" placeholder="000.000.000.00">
+          </div>
+          <div class="campo">
+            <label for="cpf">CEP</label>
+            <input type="text" id="cep" name="cep" maxlength="15" placeholder="0000-000">
+          </div>
+        </div>
   
+      </fieldset>
+      
+      <fieldset>
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="cpf">LOGRADOURO</label>
+            <input type="text" id="log" name="log">
+          </div>
+          <div class="campo">
+            <label for="cpf">NÚMERO</label>
+            <input type="text" id="num" name="num" maxlength="15" placeholder="Ex: 123">
+          </div>
+        </div>
+
+        <div class="campo-grupo">
+          <div class="campo">
+            <label for="cpf">COMPLEMENTO</label>
+            <input type="text" id="comp" name="comp" placeholder="Apto Bloco">
+          </div>
+          <div class="campo">
+            <label for="cpf">BAIRRO</label>
+            <input type="text" id="bairro" name="bairro">
+          </div>
+        </div>
+
+        <div class="campo-grupo2">
+          <div class="campo">
+            <label for="cpf">CIDADE</label>
+            <input type="text" id="cit" name="cit">
+          </div>
+          <div class="campo">
+            <label for="cpf">ESTADO</label>
+            <input type="text" id="estado" name="estado">
+          </div>
+          <div class="campo">
+            <label for="cpf">CÓDIGO IBGE</label>
+            <input type="text" id="ibge" name="ibge">
+          </div>
+        </div>
       </fieldset>
   
       <fieldset>
@@ -282,6 +339,19 @@
                 <option value="4ano">4º ano</option>
                 <option value="5ano">5º ano</option>
               </select>
+              <div id="bloco-seguna-lingua">
+                <p>SEGUNDA LÍNGUA</p>
+                <div class="opcao-lingua">
+                  <input type="radio" id="lingua_ingles" name="segunda_lingua" value="ingles">
+                  <span class="flag">US</span>
+                  <label for="lingua_ingles">Inglês</label>
+                </div>
+                <div class="opcao-lingua">
+                  <input type="radio" id="lingua_espanhol" name="segunda_lingua" value="espanhol">
+                  <span class="flag">ES</span>
+                  <label for="lingua_ingles">Espanhol</label>
+                </div>
+              </div>
             </td>
   
             <td>
