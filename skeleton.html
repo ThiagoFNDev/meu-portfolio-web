@@ -288,7 +288,7 @@
         }
 
         #bloco-telefone-tarde{
-          display: none;
+          display: grid;
           margin-top: 16px;
           padding: 16px 20px;
           background-color: #fff8f0;
@@ -458,6 +458,11 @@
               <label for="manha">Manhã</label><br>
               <input type="radio" name="turno" id="tarde" value="tarde">
               <label for="tarde">Tarde</label>
+
+              <div id="bloco-telefone-tarde">
+                <p>Telefone de Contato para o Turno da Tarde</p>
+                <input type="text" id="telefone_tarde" name="telefone_tarde" maxlength="15" placeholder="(61) 9 9999-9999">
+              </div>
             </td>
   
             <td>
@@ -495,7 +500,17 @@
 
     <script>
       const selectSerie = document.getElementById('serie');
-      const blocoLingua = document.getElementById('bloco-segunda-linha');
+      const blocoLingua = document.getElementById('bloco-segunda-lingua');
+      const radioLingua = document.querySelectorAll('input[name="segunda-lingua"]');
+
+      selectSerie.addEventListener('change', function(){
+        if(this.value =='5ano'){
+          blocoLingua.style.display = 'block';
+        }else{
+          blocoLingua.style.display = 'grid';
+          radioLingua.forEach(r => r.checked = false);
+        }
+      })
     </script>
   
   </body>
